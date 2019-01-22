@@ -1,0 +1,337 @@
+
+/* ================ ALL - HTML BÁSICO ================*/
+
+body{
+	
+	background: url("img/imagem4.JPG") center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;	
+}
+
+
+/* ================ ALL - NAVBAR ================*/
+
+/* Brand/logo */
+#brand{
+	font-size: 22px;
+	color: #FFD700;
+	font-family: 'Baloo Chettan', cursive;
+}
+
+/* Link da opção Cadastre-se */
+#revelar1:hover{
+    color: #00BFFF;
+}
+
+/* Link da opção Entrar */
+#revelar2:hover{
+    color: #00BFFF;
+}
+
+/* Link da opção Sobre */
+#modalSobre:hover{
+    color: #00BFFF;
+}
+
+/* Link da opção Criar E-mail */
+#linkCriarEmail:hover{
+    color: #00BFFF;
+}
+
+/* Link da opção Perfil */
+#linkPerfil:hover{
+    color: #00BFFF;
+}
+
+/* Link da opção Logout */
+#sair:hover{
+    color: #00BFFF;
+}
+
+#contaAtual{
+	color: #E0DAD5;
+	font-family: 'Baloo Chettan', cursive;
+}
+
+
+/* ================ INDEX - FORMULÁRIOS ================ */
+
+#cadastro,#login{
+    margin-top: 20%;
+	margin-right: 40px;
+}
+
+
+/* ================ INDEX - CADASTRO CONTA DE USUÁRIO ================ */
+
+#cadastro{
+	display: none;
+	margin-top: 5%;
+}
+
+#tituloCadastro{
+	font-family:Arial;
+	color: #4682B4;
+	font-family: 'Baloo Chettan', cursive;
+
+}
+
+#cardFormCadastro{
+	height: 530px;
+	width: 280px;
+	margin-bottom:5%; /* Remover aqui se o car de cadastro ficar estranho */
+}
+
+/* ================ INDEX - LOGIN ================ */
+
+#login{
+	display: block;
+}
+
+#tituloLogin{
+	/* font-style: italic; */
+	font-family:Arial;
+	color: #FFD700;
+	font-family: 'Baloo Chettan', cursive;
+
+}
+
+/* Nome dos campos de Login e link */
+.subTitulo,#redirLink{
+	color: #4682B4;
+}
+
+
+/* ================ WELCOME - CADASTRAR CONTA DE EMAIL ================ */
+
+#cadastrarEmail{
+	margin-top: 3%;
+	display: none;
+	height: 550px;
+	width: 450px;
+}
+
+#tipoEmail{
+	width: 115px;
+}
+
+/* ================ WELCOME - SCROLL CONTA EMAIL ================ */
+
+#tituloConta{
+	margin-top: 3%;
+	font-family:Arial;
+	color: #FFD700;
+	font-family: 'Baloo Chettan', cursive;
+
+}
+
+#scroolConta{
+	/* margin-top: 1%; */
+	/* position: absolute; */
+	height: 250px;
+	width: 260px;
+	overflow-y: auto;
+}
+
+#dimensaoConta{
+	height: 50px;
+	
+}
+
+/* ================ WELCOME - SCROLL CAIXA EMAIL ================ */
+
+#divAllEmail{ isso é tanto da Conta de email quanto das Caixas de email!!!!
+	display: none;
+ }
+
+#tituloCaixa{
+	margin-top: 3%;
+	font-family:Arial;
+	color: #FFD700;
+	font-family: 'Baloo Chettan', cursive;
+
+}
+
+#scroolCaixa{
+	/* margin-top: 1%; */
+	/* position: absolute; */
+	height: 150px;
+	width: 200px;
+	overflow-y: auto;
+}
+
+#dimensaoCaixa{
+	height: 50px;
+}
+
+/* ================ WELCOME - SCROLL MENSAGENS DAS CAIXAS ================ */
+
+
+#tituloMensagem{
+	margin-top: 3%;
+	font-family:Arial;
+	color: #FFD700;
+	font-family: 'Baloo Chettan', cursive;
+
+}
+
+#scroolMensagem{
+	/* margin-top: 1%; */
+	/* position: absolute; */
+	height: 550px;
+	width: 450px;
+	overflow-y: auto;
+}
+
+#dimensaoMensagem{
+	height: 50px;
+}
+
+
+/* ================ WELCOME - SCROLL MENSAGENS INDIVIDUAL ================ */
+
+#scroolMensagemUnica{
+	margin-top: 20%;
+	position: absolute;
+	height: 350px;
+	width: 230px;
+	overflow-y: auto;
+}
+
+
+
+/* ================ WELCOME - BOTÃO ESCREVER E-MAIL ================ */
+
+#escreverEmail{
+	margin-top: 20%;
+	margin-left: 15%;
+}
+
+/* ================ WELCOME - BOTÃO ENVIAR PARA LIXEIRA ================ */
+
+#divBotaoMensagemUnica{
+	position: absolute;
+	margin-top: 100%;
+	margin-left: 5%;
+}
+
+/* ================ WELCOME - PERFIL DO USUÁRIO ================ */
+
+#tituloPerfil,#tituloEscrever{
+	margin-top: 3%;
+	font-family:Arial;
+	color: #33b5e5;
+	font-family: 'Baloo Chettan', cursive;
+}
+
+
+/* ================ WELCOME - EFEITO EM TODOS OS SCROLL'S ================ */
+.scrollbar-cyan::-webkit-scrollbar-track {
+/* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); */
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-cyan::-webkit-scrollbar {
+width: 12px;
+background-color: #33b5e5; }
+
+.scrollbar-cyan::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #00bcd4; }
+
+
+
+/* ================ WELCOME - SNACKBAR ================ */
+
+/* ============= FALHA ============ */
+#snackbarWarning {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #ff614f;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbarWarning.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+/* ============= SUCESSO ============ */
+#snackbarSuccess {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #87d683;
+  color: #000;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbarSuccess.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* ============= AVISO ============ */
+#snackbarNotice {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #44bee3;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbarNotice.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* ============= COMUM AOS SCNACKBAR'S ============ */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

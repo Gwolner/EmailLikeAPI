@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projeto Web 1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+
+</head>
+<body>
+	
+    <!--NAVBAR-->
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<div class="container-fluid">
+			
+			<div class="navbar-header">
+				<ul class="navbar-nav">
+				<a id="brand" class="navbar-brand" href="#">Projeto Email Like API!</a>
+				<li class="nav-item">
+					<a id="linkCriarEmail" class="nav-link" href="#">Criar e-mail</a>
+				</li>
+				<li class="nav-item">
+					<a id="linkPerfil" class="nav-link" href="#">Perfil</a>
+				</li>
+			</ul>
+			</div>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item">
+					<a id="contaAtual" class="nav-link" href="#">Crie sua primeira conta para começar a utilizar o sistema!</a>
+				</li>
+				<li class="nav-item">
+					<a id="sair" class="nav-link" href="#">Logout</a>
+				</li>
+			</ul>
+		</div>
+    </nav>
+	
+    <!-- MODAL -->
+	<div id="modalWriteEmail" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">				
+		  <div class="modal-body">
+			<form id="formEnvioEmail">
+			
+			  <div class="form-group">				
+				<h3 id="tituloEscrever">Escrever e-mail</h3>
+				<select id="selectDestinatario" class="form-control form-control-sm">
+					<option value="">Selecione um destinatário (obrigatório)</option>
+				</select>
+			  </div>
+			  
+			  <div class="form-group">
+				<!-- <label for="recipient-name" class="col-form-label">Assunto</label> -->
+				<input id="assunto" type="text" class="form-control" placeholder="Assunto" required>
+			  </div>
+			  
+			  <div class="form-group">
+				<!-- <label for="recipient-name" class="col-form-label">CC</label> -->
+				<select id="selectCC" class="form-control form-control-sm">
+					<option value="">CC (opcional)</option>
+				</select>
+			  </div>
+			  
+			  <div class="form-group">
+				<!-- <label for="recipient-name" class="col-form-label">CCo</label> -->
+				<select id="selectCCo" class="form-control form-control-sm">
+					<option value="">CCo (opcional)</option>
+				</select>
+			  </div>
+			  
+			  <div class="form-group">
+				<label for="message-text" class="col-form-label">Mensagem</label>
+				<textarea id="corpoMensagem" class="form-control"  rows="6" maxlength="252" placeholder="Máximo de 253 caracteres" required></textarea>
+			  </div>
+			  
+			  <button type="reset" class="btn btn-secondary">Limpar</button>
+			  <button id="sendMail" type="submit" class="btn btn-primary">Enviar</button>
+			</form>
+		  </div>						  
+		</div>
+	  </div>
+	</div>
+	
+	<div id="modalPerfil" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">				
+		  <div class="modal-body">
+			<h3 id="tituloPerfil">Perfil</h3>
+			<label id="nomePerfil"></label><br/><br/>
+			<label id="loginPerfil"></label><br/><br/>
+			<label id="cpfPerfil"></label><br/><br/>
+			<label id="emailSecundarioPerfil"></label><br/><br/>
+			<label id="totalContasPerfil"></label>
+		  </div>						  
+		</div>
+	  </div>
+	</div>
+	
+	<!-- GRID -->
+	<div class="container-fluid">
+			<div class="row">
+
+				<div id="divAllEmail" class="col col-sm col-md col-lg col-xl">
+
+					<h2 id="tituloConta">Contas</h2>
+					
+					<div id="scroolConta" class="list-group example-1 square scrollbar-cyan bordered-cyan">
+						<div id="dimensaoConta"></div>
+					</div>
+					
+					<h2 id="tituloCaixa">Caixas</h2>
+
+					<div id="scroolCaixa" class="list-group example-1 square scrollbar-cyan bordered-cyan">	
+						<div id="dimensaoCaixa"></div>
+					</div>
+					
+					<button id="escreverEmail" type="button" class="btn btn-outline-warning">Escrever</button>
+
+				</div>
+				<div class="col col-sm col-md col-lg col-xl">
+					
+					<!-- Formulário de Conta de email -->
+					<form id="cadastrarEmail">
+						<h2 id="tituloLogin">Crie sua conta</h2>
+						
+						<br/><h6 class="subTitulo">Conta de e-mail</h6>
+						<input id="contaEmail" type="email" name="contaEmail" maxlength="25" required/><br/>
+							
+						<br/><h6 class="subTitulo">Confirmar e-mail</h6>
+						<input id="confirmarEmail" type="email" name="confirmarEmail" maxlength="25"required/><br/>
+						
+						<br/><h6 class="subTitulo">Tipo de conta</h6>			
+						<select id="tipoEmail" class="form-control form-control-sm">
+						  <option value="pessoal">Pessoal</option>
+						  <option value="profissional">Profissional</option>
+						</select>
+						
+						<br/><br/>
+						<input type="submit" class="btn btn-outline-warning" value="Criar"/>							
+					</form>
+					
+					<h2 id="tituloMensagem">Mensagens</h2>
+					
+					<div id="scroolMensagem" class="list-group example-1 square scrollbar-cyan bordered-cyan">
+						<div id="dimensaoMensagem"></div>
+					</div>
+
+				</div>
+				<div class="col col-sm col-md col-lg col-xl">
+					
+					<div id="scroolMensagemUnica" class="card example-1 square scrollbar-cyan bordered-cyan">
+
+						<div class="card-body">
+						
+							<div id="tituloMensagemUnica">TITULO</div><br/><br/>
+							<p id="corpoMensagemUnica" class="card-text">CORPO</p>
+							
+						</div>
+
+					</div>
+					
+					<div id="divBotaoMensagemUnica"></div>
+					
+					<!-- <div id="snackbarSuccess"/><div id="snackbarWarning"/><div id="snackbarNotice"/> -->
+					<div id="snackbarSuccess"></div><div id="snackbarWarning"></div> <div id="snackbarNotice"></div>
+					
+				</div>		
+				
+			</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="scriptWelcome.js"></script>
+</body>
+</html>

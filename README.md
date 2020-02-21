@@ -1,4 +1,4 @@
-# Email Like API! <img src="img/bootstrap.png" width="160" height="40" align="right">
+# Email Like API! <img src="logo/bootstrap.png" width="40" height="40" align="right">
 
 Projeto de um serviço de e-mail para a disciplina de Desenvolvimento Web 1.
 

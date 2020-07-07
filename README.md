@@ -19,3 +19,8 @@ as excluídas.
 Com uma conta selecionada o usuário pode enviar mensagens de e-mail APENAS para contas também cadastradas no sistema. Em outras palavras, 
 um usuário não pode enviar e-mail para contas do Google, Yahoo, Hotmail, etc pois o funcionamento do serviço é limitado apenas a troca de 
 mensagens no próprio servidor.
+
+
+## API
+
+http://tads-trello.herokuapp.com/web1/email.html
